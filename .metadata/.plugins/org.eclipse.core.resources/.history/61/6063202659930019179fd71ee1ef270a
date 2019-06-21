@@ -1,0 +1,8 @@
+package com.kdj.seasonalityindex;
+
+import java.util.HashMap;
+
+public interface SeasonalityIndexMapper {
+	
+	public HashMap<String, String> selectParameter(String regionId, String productGroup);
+}

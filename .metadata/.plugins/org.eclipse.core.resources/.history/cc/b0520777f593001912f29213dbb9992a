@@ -1,0 +1,10 @@
+$("input[name=region_id]")
+
+function changeRegionId() {
+	var inputLength = $("input[name=region_id]").length;
+	inputList = [];
+	for (var i = 0; i < inputLength; i++) {
+		inputList.push($("input[name=region_id]:eq(" + i + ")").val());
+	}
+	console.log(inputList)
+}

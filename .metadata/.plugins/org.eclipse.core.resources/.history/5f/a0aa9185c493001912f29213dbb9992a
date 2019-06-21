@@ -1,0 +1,34 @@
+package com.kdj.seasonalityindex;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.kdj.dataformat.SeasonalityData;
+
+public class SeasonalityIndex implements SeasonalityIndexMapper {
+	
+	@Autowired
+	SeasonalityIndexMapper mapper;
+
+	public List<SeasonalityData> selectData() {
+		return mapper.selectData();
+	}
+
+	public SeasonalityData selectDataByKey(String regionId, String product, String yearweek) {
+		return mapper.selectDataByKey(regionId, product, yearweek);
+	}
+
+	public void insertData(SeasonalityData seasonalityData) {
+		
+	}
+
+	public void updateData(SeasonalityData seasonalityData) {
+		
+	}
+
+	public void deleteData(String regionId, String product, String yearweek) {
+		
+	}
+	
+}

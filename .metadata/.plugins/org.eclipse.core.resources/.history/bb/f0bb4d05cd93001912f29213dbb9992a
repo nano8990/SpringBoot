@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kdj.parameter.ParameterConditionMapper">
+	<select id="selectParameter" parameterType="char" resultType="Parameter">
+		SELECT
+			COLUMN_NAME,
+			SELECT_CONDITION,
+			USE_YN
+		FROM SEASONALITY_PARAMETER
+		WHERE USE_YN = #{useYn}
+	</select>
+	<select id="insertParameter" parameterType="Parameter">
+		INSERT INTO
+		SEASONALITY_PARAMETER(
+			COLUMN_NAME,
+			SELECT_CONDITION,
+			USE_YN
+		)
+		VALUES(
+			#{columnName},
+			#{selectCondition},
+			#{useYn}
+		)
+	</select>
+	<select id="updateParameter" parameterType="Parameter">
+		UPDATE SEASONALITY_PARAMETER SET
+			SELECT_CONDITION = #{selectCondition},
+			USE_YN = #{useYn}
+		WHERE COLUMN_NAME = #{columnName}
+	</select>
+	<select id="deleteParameter" parameterType="String">
+		DELETE FROM SEASONALITY_PARAMETER
+		WHERE COLUMN_NAME = #{columnName}
+	</select>
+</mapper>

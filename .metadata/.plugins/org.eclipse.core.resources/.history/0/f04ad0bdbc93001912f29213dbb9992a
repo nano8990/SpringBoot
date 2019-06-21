@@ -1,0 +1,19 @@
+package com.kdj.dataformat;
+
+public class Parameter {
+	
+	public String columnName;
+	public String value;
+	public char useYn;
+	
+	public Parameter() {
+		
+	}
+	
+	public Parameter(String columnName, String value, char useYn) {
+		this.columnName = columnName;
+		this.value = value;
+		this.useYn = useYn;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.kdj.parameter;
+
+public interface ParameterConditionMapper {
+
+}

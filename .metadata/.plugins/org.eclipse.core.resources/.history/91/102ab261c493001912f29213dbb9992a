@@ -1,0 +1,34 @@
+package com.kdj.parameter;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.kdj.dataformat.Parameter;
+
+public class ParameterCondition implements ParameterConditionMapper {
+
+	@Autowired
+	ParameterConditionMapper mapper;
+	
+	public List<Parameter> selectParameter(char useYn) throws Exception{
+		if (useYn == 'Y' || useYn == 'y' || useYn == 'N' || useYn == 'n') {
+			return mapper.selectParameter(useYn);
+		} else {
+			throw new Exception("Input Yes or No");
+		}
+	}
+
+	public void insertParameter(Parameter parameter) {
+		mapper.insertParameter(parameter);
+	}
+
+	public void updateParameter(Parameter parameter) {
+		mapper.updateParameter(parameter);
+	}
+
+	public void deleteParameter(String columnName) {
+		mapper.deleteParameter(columnName);
+	}
+
+}

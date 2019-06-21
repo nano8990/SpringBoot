@@ -1,0 +1,18 @@
+package com.kdj.seasonality;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class ParameterController {
+	
+//	@Autowired
+//	ParameterConditionMapper mapper = new ParameterCondition();
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String selectForm() {
+		return "select_parameter.jsp";
+	}
+	
+}

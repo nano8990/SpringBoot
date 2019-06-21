@@ -1,0 +1,11 @@
+package com.kdj.parameter;
+
+import java.util.ArrayList;
+
+import com.kdj.dataformat.Parameter;
+
+public interface ParameterConditionMapper {
+	
+	public ArrayList<Parameter> selectParameter(char useYn);
+	
+}

@@ -1,0 +1,23 @@
+package com.kdj.parameter;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+
+import com.kdj.dataformat.Parameter;
+
+public interface ParameterConditionMapper {
+	
+	@Bean
+	public List<Parameter> selectParameter(char useYn);
+	
+	@Bean
+	public void insertParameter(Parameter parameter);
+	
+	@Bean
+	public void updateParameter(Parameter parameter);
+	
+	@Bean
+	public void deleteParameter(String columnName);
+	
+}

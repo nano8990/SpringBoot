@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kdj.seasonalityindex.SeasonalityIndexMapper">
+	<select id="selectData" resultType="SeasonalityData">
+		SELECT
+			REGIONID,
+			PRODUCT,
+			YEARWEEK,
+			QTY
+		FROM SEASONALITY_INDEX
+	</select>
+	<select id="selectDataByKey" parameterType="String" resultType="SeasonalityData">
+		SELECT
+			REGIONID,
+			PRODUCT,
+			YEARWEEK,
+			QTY
+		FROM SEASONALITY_INDEX
+		WHERE
+			REGIONID IN(${regionId})
+			AND PRODUCT IN(${product})
+			AND YEARWEEK BETWEEN ${yearweekStart} AND ${yearweekEnd}
+			AND QTY BETWEEN ${qtyStart} AND ${qtyEnd}
+	</select>
+	<select id="insertData" parameterType="SeasonalityData">
+		INSERT INTO
+		SEASONALITY_INDEX(
+			REGIONID,
+			PRODUCT,
+			YEARWEEK,
+			QTY
+		)
+		VALUES(
+			#{regionId},
+			#{product},
+			#{yearweek},
+			#{qty}
+		)
+	</select>
+	<select id="updateData" parameterType="SeasonalityData">
+		UPDATE SEASONALITY_INDEX SET
+			QTY = #{qty}
+		WHERE
+			REGIONID = #{regionId}
+			PRODUCT = #{product}
+			YEARWEEK = #{yearweek}
+	</select>
+	<select id="deleteData" parameterType="String">
+		DELETE FROM SEASONALITY_INDEX
+		WHERE
+			REGIONID = #{regionId}
+			PRODUCT = #{product}
+			YEARWEEK = #{yearweek}
+	</select>
+</mapper>

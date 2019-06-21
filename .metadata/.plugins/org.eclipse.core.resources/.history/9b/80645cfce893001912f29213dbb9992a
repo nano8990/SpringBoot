@@ -1,0 +1,13 @@
+package com.kdj.seasonality;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SeasonalityApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SeasonalityApplication.class, args);
+	}
+
+}

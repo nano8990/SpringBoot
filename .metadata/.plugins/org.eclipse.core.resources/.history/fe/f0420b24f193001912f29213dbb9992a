@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Parameter</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1>Select Parameter</h1>
+	<form action="do_select_parameter" method="get">
+		REGIONID<br />
+		<input type="text" name="region_id" placeholder="REGIONID" />
+		<input type="text" name="region_id" placeholder="REGIONID" />
+		<br /><br />
+		PRODUCT<br />
+		<input type="text" name="product" placeholder="PRODUCT" />
+		<br /><br />
+		YEARWEEK<br />
+		<input type="text" name="yearweek_start" placeholder="YEARWEEK START" /> ~ <input type="text" name="yearweek_end" placeholder="YEARWEEK END" />
+		<br /><br />
+		QTY<br />
+		<input type="text" name="qty_start" placeholder="QTY UP" /> ~ <input type="text" name="qty_down" placeholder="QTY DOWN" />
+		<br /><br />
+		<input type="submit" value="Search">
+	</form>
+</body>
+<script src="/static/js/select_parameter.js"></script>
+</html>

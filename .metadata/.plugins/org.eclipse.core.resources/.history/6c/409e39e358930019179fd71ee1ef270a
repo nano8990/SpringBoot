@@ -1,0 +1,5 @@
+package com.kdj.seasonalityindex;
+
+public interface SeasonalityIndexMapper {
+	
+}

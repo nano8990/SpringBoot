@@ -1,0 +1,16 @@
+package com.kdj.parametercontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kdj.parameter.ParameterConditionMapper;
+import com.kdj.parameter.ParameterCondition;
+
+@RestController
+public class ParameterController {
+	
+	@Autowired
+	ParameterConditionMapper mapper = new ParameterCondition();
+
+	
+}

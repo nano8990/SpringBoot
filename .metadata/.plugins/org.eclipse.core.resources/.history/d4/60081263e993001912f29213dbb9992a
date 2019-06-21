@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input Parameter</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="static/select_parameter.js"></script>
+<body>
+<span id="a"></span>
+</body>
+</html>

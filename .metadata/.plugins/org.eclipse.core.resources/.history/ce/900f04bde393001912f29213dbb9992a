@@ -1,0 +1,35 @@
+package com.kdj.parameter;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import com.kdj.dataformat.Parameter;
+
+public class ParameterCondition implements ParameterConditionMapper {
+
+	@Autowired
+	ParameterConditionMapper mapper;
+	
+	@Bean
+	public List<Parameter> selectParameter(char useYn) {
+		return mapper.selectParameter(useYn);
+	}
+	
+	@Bean
+	public void insertParameter(Parameter parameter) {
+		mapper.insertParameter(parameter);
+	}
+
+	@Bean
+	public void updateParameter(Parameter parameter) {
+		mapper.updateParameter(parameter);
+	}
+
+	@Bean
+	public void deleteParameter(String columnName) {
+		mapper.deleteParameter(columnName);
+	}
+
+}

@@ -1,0 +1,24 @@
+$('input[name=region_id]').on('propertychange change keyup paste input', function() {
+});
+
+function changeRegionId() {
+	var inputRegionId = '<input type="text" name="region_id" onChange="' + this + '" placeholder="REGIONID" /><br />';
+	inputList = [];
+	for (var i = 0; i < $('input[name=region_id]').length; i++) {
+		inputList.push($('input[name=region_id]:eq(' + i + ')').val());
+	}
+	if (inputList.includes('')) {
+		spanString = '';
+		for (var i = 0; i < inputLength; i++) {
+			var eachInput = inputList[i];
+			if (eachInput != '') {
+				spanString += '<input type="text" name="region_id" onChange="' + this + '" placeholder="REGIONID" value="' + eachInput +'" /><br />';
+			}
+		}
+		spanString += inputRegionId;
+		$('#spanRegionId').html(spanString);
+	} else {
+		var inputAppend = inputRegionId;
+		$('#spanRegionId').append(inputAppend);
+	}
+}
