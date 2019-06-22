@@ -6,4 +6,5 @@
 <aop-project name="Seasonality"/>
 <aop-project name="MySql"/>
 <aop-project name="gs-accessing-data-mysql-complete"/>
+<aop-project name="ProjectSeasonality"/>
 </aop-reference-model>
